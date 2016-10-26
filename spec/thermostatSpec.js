@@ -47,4 +47,20 @@ describe('Thermostat', function(){
     thermostat.reset();
     expect(thermostat.temperature).toEqual(20);
   });
+  it('displays green based on usage', function(){
+    for (var i = 1; i <= 3; i++){
+      thermostat.down();
+    }
+    expect(thermostat.display()).toEqual('Green');
+  });
+  it('displays yellow based on usage', function(){
+    expect(thermostat.display()).toEqual('Yellow');
+  });
+  it('displays red based on usage', function(){
+    thermostat.powerSavingOff();
+    for (var i = 1; i <= 6; i++){
+      thermostat.up();
+    }
+    expect(thermostat.display()).toEqual('Red');
+  });
 });
