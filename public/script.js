@@ -2,6 +2,8 @@ var thermostat = new Thermostat();
 
 function getTemperature(){
   document.getElementById("temperature").innerHTML = thermostat.temperature;
+  //$('#temperature').text(thermostat.temperature);
+  $('#temperature').attr('class', thermostat.display());
 }
 getTemperature();
 

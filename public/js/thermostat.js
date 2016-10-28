@@ -1,7 +1,7 @@
-
+// var DEFAULT_TEMP = 20;
 function Thermostat() {
-  var DEFAULT_TEMP = 20;
-  this.temperature = DEFAULT_TEMP;
+
+  this.temperature = 20;
   this.powerSavingMode = true;
   this.maxTemperature = 25;
   this.minTemperature = 10;
@@ -38,14 +38,14 @@ Thermostat.prototype.powerSavingOff = function() {
   this.maxTemperature = 32;
 };
 Thermostat.prototype.resetThermostat = function() {
-  this.temperature = DEFAULT_TEMP;
+  this.temperature = 20;
 };
 Thermostat.prototype.display = function() {
   if(this.temperature < 18) {
-    return 'Green';
+    return 'low usage';
   } else if(this.temperature > 25) {
-    return 'Red';
+    return 'high usage';
   } else {
-    return 'Yellow';
+    return 'medium usage';
   }
 };

@@ -1,0 +1,16 @@
+button {
+  height: 50px;
+  font-size: 20px;
+}
+
+.low.usage {
+          color: green;
+}
+
+.medium.usage {
+          color: yellow;
+}
+
+.high.usage {
+          color: red;
+}
